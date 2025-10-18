@@ -1,2 +1,14 @@
-*vscode
+.vscode/
+*.code-workspace
+
 .env
+.env.local
+.env.*.local
+
+.DS_Store
+Thumbs.db
+
+*.log
+
+node_modules/
+dist/
