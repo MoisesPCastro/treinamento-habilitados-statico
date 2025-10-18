@@ -12,16 +12,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
+<script type="module">
+    import { Icons } from './components/icons.js'
+
+    document.querySelectorAll('[data-icon]').forEach(el => {
+        const name = el.getAttribute('data-icon')
+        if (Icons[name]) el.innerHTML = Icons[name]
+    })
+</script>
+
 <body>
 
     <header id="hero">
         <div class="container">
-            <!-- Logo no canto superior esquerdo -->
             <div class="logo">
                 <img src="/./src/assets/logo-via240.png" alt="Logo Via 240" class="logo-img">
             </div>
 
-            <!-- Conteúdo centralizado -->
             <div class="hero-content-wrapper">
                 <div class="hero-text-content">
                     <h1>Vença o medo! Dirija com Confiança Total.</h1>
@@ -35,54 +42,97 @@
     </header>
 
     <div class="servicos-grid">
-        <div class="card">
-            <img src="/./src/assets/onibus.png" alt="Ônibus" class="card-icon">
-            <h3>Treinamento para Empresas de Ônibus</h3>
-            <p>Focado em **testes de empresas de ônibus urbano** com ênfase em **Direção Econômica**, Segurança e
-                Desenvolvimento profissional para rodar nas ruas de São Luís.</p>
+        <div class="servicos-grid">
+
+            <div class="card">
+                <img src="/./src/assets/onibus.png" alt="Ônibus" class="card-icon">
+                <h3>Treinamento para Empresas de Ônibus</h3>
+                <p>
+                    Focado em testes práticos de empresas de ônibus urbano, com ênfase total em
+                    Direção Econômica, Segurança e
+                    Desempenho Profissional nas ruas da Grande BH.
+                    <br><br>
+                    Torne-se o motorista que as empresas procuram!
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="/./src/assets/onibus_longe.png" alt="Instrutor" class="card-icon">
+                <h3>Instrutor com Experiência de Ouro</h3>
+                <p>
+                    Aprenda com um profissionais qualificados e com varios anos de experiência no trânsito urbano.
+                    <br>
+                    Aulas com paciência, didática e muito conhecimento real —
+                    direto de quem vive cada desafio das ruas.
+                    <br>
+                    Treinamento feito sob medida para você evoluir!
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="/./src/assets/carro.png" alt="Carro" class="card-icon">
+                <h3>Volte a Dirigir sem Medo</h3>
+                <p>
+                    Aulas práticas em carros novos, pensadas para você
+                    vencer o medo, a ansiedade e o trânsito pesado.
+                    <br><br>
+                    Domine a baliza, os cruzamentos e volte a dirigir com confiança total!
+                </p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <img src="/./src/assets/loja.png" alt="Instrutor" class="card-icon">
-            <h3>Instrutor com Experiência de Ouro</h3>
-            <p>Conte com um profissional com **mais de 30 anos como motorista urbano**, garantindo paciência, didática e
-                conhecimento prático do dia a dia do trânsito.</p>
-        </div>
-
-        <div class="card">
-            <img src="/./src/assets/carro.png" alt="Carro" class="card-icon">
-            <h3>Volte a Dirigir sem Medo</h3>
-            <p>Aulas em veículos novos (Carro e Moto), com percursos pensados para você vencer a insegurança, baliza e o
-                trânsito pesado de São Luís.</p>
-        </div>
     </div>
     <a href="https://wa.me/5531987236333?text=Olá, encontrei a Via 240 no site e gostaria de saber mais sobre os treinamentos para habilitados."
         target="_blank" class="btn-whatsapp-flutuante">
     </a>
+
     <footer id="contato">
         <div class="container">
-
             <div class="info-grid">
                 <div class="info-item">
-                    <h4>Telefones</h4>
-                    <p>(98) 98723-6533</p>
-                    <p>(98) 99175-7271</p>
+                    <h4>📞 Telefones</h4>
+
+                    <p class="with-icon">
+                        <span data-icon="phone"></span>
+                        (98) 98723-6533
+                    </p>
+
+                    <p class="with-icon">
+                        <span data-icon="phone"></span>
+                        (98) 99175-7271
+                    </p>
+
+                    <a href="https://wa.me/5598987236533" target="_blank" class="btn-whatsapp-grande with-icon">
+                        <span data-icon="whatsapp"></span>
+                        Fale conosco no WhatsApp
+                    </a>
                 </div>
+
                 <div class="info-item">
                     <h4>Endereço</h4>
-                    <p>Av. Risoleta Neves, 174</p>
-                    <p>Novo Aarão Reis, São Luís/MA</p>
+                    <p class="with-icon"><span data-icon="location"></span>Av. Risoleta Neves, 174</p>
+                    <p class="with-icon"><span data-icon="location"></span>Novo Aarão Reis, São Luís/MA</p>
                 </div>
+
                 <div class="info-item">
                     <h4>Siga-nos</h4>
-                    <a href="https://instagram.com/habilitadostreinamento"
-                        target="_blank">@habilitadostreinamento</a><br>
-                    <a href="https://instagram.com/instrutorjosefrancisco" target="_blank">@instrutorjosefrancisco</a>
+                    <p class="with-icon">
+                        <span data-icon="instagram"></span>
+                        <a href="https://instagram.com/habilitadostreinamento"
+                            target="_blank">@habilitadostreinamento</a>
+                    </p>
+                    <p class="with-icon">
+                        <span data-icon="instagram"></span>
+                        <a href="https://instagram.com/instrutorjosefrancisco"
+                            target="_blank">@instrutorjosefrancisco</a>
+                    </p>
                 </div>
             </div>
             <p class="copyright">&copy; 2025 Via 240 Treinamento. Todos os direitos reservados.</p>
         </div>
     </footer>
+
 
 </body>
 
