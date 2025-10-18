@@ -317,7 +317,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
 
     .info-grid {
         flex-direction: column;
